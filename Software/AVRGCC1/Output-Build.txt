@@ -1,0 +1,41 @@
+﻿------ Rebuild All started: Project: AVRGCC1, Configuration: Debug AVR ------
+Build started.
+Project "AVRGCC1.cproj" (ReBuild target(s)):
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "CoreRebuild" in file "C:\Program Files (x86)\Atmel\AVR Studio 5.1\Vs\Compiler.targets" from project "C:\Users\PHSecchi\Google Drive\Projetos\5 Semestre\Projeto Chaves\Projeto1\AVRGCC1\AVRGCC1\AVRGCC1.cproj" (target "ReBuild" depends on it):
+	Task "RunCompilerTask"
+		C:\Program Files (x86)\Atmel\AVR Studio 5.1\make\make.exe clean all 
+		rm -rf  AVRGCC1.o LCD.o AVRGCC1.d LCD.d  
+		rm -rf "AVRGCC1.hex" "AVRGCC1.lss" "AVRGCC1.eep" "AVRGCC1.map"
+AVRGCC1.c
+		Invoking: AVR/GNU C Compiler
+		"C:\Program Files (x86)\Atmel\AVR Studio 5.1\extensions\Atmel\AVRGCC\3.3.1.27\AVRToolchain\bin\avr-gcc.exe"  -funsigned-char -funsigned-bitfields -O1 -fpack-struct -fshort-enums -g2 -Wall -c -std=gnu99 -MD -MP -MF "AVRGCC1.d" -MT"AVRGCC1.d"  -mmcu=atmega328p  -o"AVRGCC1.o" ".././AVRGCC1.c" 
+		Finished building: .././AVRGCC1.c
+LCD.c
+		Invoking: AVR/GNU C Compiler
+		"C:\Program Files (x86)\Atmel\AVR Studio 5.1\extensions\Atmel\AVRGCC\3.3.1.27\AVRToolchain\bin\avr-gcc.exe"  -funsigned-char -funsigned-bitfields -O1 -fpack-struct -fshort-enums -g2 -Wall -c -std=gnu99 -MD -MP -MF "LCD.d" -MT"LCD.d"  -mmcu=atmega328p  -o"LCD.o" ".././LCD.c" 
+		Finished building: .././LCD.c
+		Building target: AVRGCC1.elf
+		Invoking: AVR/GNU C Linker
+		"C:\Program Files (x86)\Atmel\AVR Studio 5.1\extensions\Atmel\AVRGCC\3.3.1.27\AVRToolchain\bin\avr-gcc.exe" -o AVRGCC1.elf  AVRGCC1.o LCD.o   -Wl,-Map="AVRGCC1.map" -Wl,-lm   -mmcu=atmega328p  
+		Finished building target: AVRGCC1.elf
+		"C:\Program Files (x86)\Atmel\AVR Studio 5.1\extensions\Atmel\AVRGCC\3.3.1.27\AVRToolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature  "AVRGCC1.elf" "AVRGCC1.hex"
+		"C:\Program Files (x86)\Atmel\AVR Studio 5.1\extensions\Atmel\AVRGCC\3.3.1.27\AVRToolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "AVRGCC1.elf" "AVRGCC1.eep" || exit 0
+		"C:\Program Files (x86)\Atmel\AVR Studio 5.1\extensions\Atmel\AVRGCC\3.3.1.27\AVRToolchain\bin\avr-objdump.exe" -h -S "AVRGCC1.elf" > "AVRGCC1.lss"
+		"C:\Program Files (x86)\Atmel\AVR Studio 5.1\extensions\Atmel\AVRGCC\3.3.1.27\AVRToolchain\bin\avr-size.exe" -C --mcu=atmega328p  "AVRGCC1.elf"
+		AVR Memory Usage
+		----------------
+		Device: atmega328p
+		Program:    1340 bytes (4.1% Full)
+		(.text + .data + .bootloader)
+		Data:          5 bytes (0.2% Full)
+		(.data + .bss + .noinit)
+	Done executing task "RunCompilerTask".
+Done building target "CoreRebuild" in project "AVRGCC1.cproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
+Target "ReBuild" in file "C:\Program Files (x86)\Atmel\AVR Studio 5.1\Vs\Avr.common.targets" from project "C:\Users\PHSecchi\Google Drive\Projetos\5 Semestre\Projeto Chaves\Projeto1\AVRGCC1\AVRGCC1\AVRGCC1.cproj" (entry point):
+Done building target "ReBuild" in project "AVRGCC1.cproj".
+Done building project "AVRGCC1.cproj".
+
+Build succeeded.
+========== Rebuild All: 1 succeeded, 0 failed, 0 skipped ==========
